@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Map;
+
 @RestController
 @CrossOrigin
 @RequestMapping("/order")
@@ -14,10 +16,11 @@ public class OrderController {
     @Autowired
     private OrderService orderService;
 
-    @PostMapping("/view")
-    public void orderView(String userId, String userPassword, Long bookId, int count){
+    @PostMapping("/book")
+    public Map<String,Object> orderView(String userId, String userPassword, Long bookId, int count){
         System.out.println(userId + userPassword);
-        orderService.order(userId, userPassword, bookId, count);
+        Map<String,Object> map=orderService.order(userId, userPassword, bookId, count);
+        return map;
     }
 
 }
