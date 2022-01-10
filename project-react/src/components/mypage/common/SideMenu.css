@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@500&family=Nanum+Gothic:wght@800&display=swap');
+
+#sidebar {
+    height: 35vh;
+    background-size: cover;
+    font-family:  'Nanum Gothic', sans-serif;
+    
+}
+#diary {
+    font-size: medium;
+}
+#profile_title{
+    font-family: 'Nanum Gothic', sans-serif;
+}
+#profile_content{
+    font-family: 'Nanum Gothic', sans-serif;
+}
+#bookstyle {
+    font-family: 'Nanum Gothic', sans-serif;
+}
+#point {
+    font-size: medium;
+}
+#nanum_font {
+    font-family: 'Nanum Gothic', sans-serif;
+}

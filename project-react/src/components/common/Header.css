@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@800&display=swap');
+
+.nav-item {
+    font-family: 'Nanum Gothic', sans-serif;
+    /* font-weight: bolder; */
+}
+
+#search_btn{
+    background-color: black;
+    border-color: black;
+}
+#search_txt{
+    size: 10px;
+}
+
+#hanbook{
+    font-size: 40px;
+    font-weight: bolder;
+}
