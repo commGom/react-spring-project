@@ -120,21 +120,12 @@ const DiaryDetail = () => {
               }}>Edit</button>
             </div>
           </div>
-          <textarea name="thought" id="thought" style={{ width: "100%" }} rows="5" class="form-control" value={data.thought}
-            onChange={(e) => {
-              setData({ ...data, thought: e.target.value })
-            }}>
+          <textarea name="thought" id="thought" style={{ width: "100%" }} rows="5" class="form-control" value={data.thought}>
 
           </textarea>
           <h5 class="text mt-3" id="profile_title">감상문</h5>
-          <input type="text" name="title" id="title" class="form-control bg-warning bg-opacity-10 mb-1" placeholder="한 줄 평" value={data.title}
-            onChange={(e) => {
-              setData({ ...data, title: e.target.value })
-            }}></input>
-          <textarea name="content" id="content" class="form-control" rows="17" placeholder="줄거리 입력" value={data.content}
-            onChange={(e) => {
-              setData({ ...data, content: e.target.value })
-            }}>
+          <input type="text" name="title" id="title" class="form-control bg-warning bg-opacity-10 mb-1" placeholder="한 줄 평" value={data.title}></input>
+          <textarea name="content" id="content" class="form-control" rows="17" placeholder="줄거리 입력" value={data.content}>
           </textarea>
         </div>
       </div>

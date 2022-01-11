@@ -113,7 +113,7 @@ const DiaryList = () => {
                       const userId = sessionStorage.getItem("userId");
                       axios({
                         url: url,
-                        method: 'get',
+                        method: 'delete',
                         params: { id, userId }
                       }).then((res) => {
                         const result = res.data;

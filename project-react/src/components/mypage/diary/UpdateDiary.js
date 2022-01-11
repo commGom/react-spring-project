@@ -72,7 +72,7 @@ const UpdateDiary = () => {
             formData.append("thought", thought);
             const result = axios({
               url: 'http://localhost:8080/mypage/diary/update',
-              method: 'post',
+              method: 'put',
               data: formData
             });
             result.then((res) => {

@@ -6,7 +6,7 @@ import com.ksa.project.model.User;
 import com.ksa.project.repository.BookRepository;
 import com.ksa.project.repository.OrdersRepository;
 import com.ksa.project.repository.UserRepository;
-import lombok.extern.slf4j.Slf4j;
+//import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -14,7 +14,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.util.List;
 
 @SpringBootTest
-@Slf4j
+//@Slf4j
 //@Transactional
 class BookDiaryServiceTest {
     @Autowired
@@ -46,15 +46,15 @@ class BookDiaryServiceTest {
     void diaryList() {
         User findUser = userRepository.findByEmail("phyw1129@naver.com");
         List<BookDiary> bookDiaries = bookDiaryService.diaryList(findUser.getId());
-        log.info("diaryList Test 실시~~~~~~");
-        log.info(bookDiaries.toString());
+//        log.info("diaryList Test 실시~~~~~~");
+//        log.info(bookDiaries.toString());
     }
 
     @Test
     void diaryDetail() {
         Long diaryId=1L;
         BookDiary bookDiary = bookDiaryService.diaryDetail(diaryId);
-        log.info(bookDiary.toString());
+//        log.info(bookDiary.toString());
 
 
     }

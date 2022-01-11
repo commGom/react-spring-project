@@ -37,7 +37,7 @@ public class MyPageController {
         return findUser;
     }
     //UserInfo update
-    @PostMapping("/userUpdate")
+    @PutMapping("/userUpdate")
     public Map<String,Object> editUser(String userId, String userPassword, User user){
         System.out.println(userId+","+userPassword+":"+user);
         User findUser = userRepository.findByEmailAndPassword(userId, userPassword);
@@ -76,7 +76,7 @@ public class MyPageController {
         return map;
     }
 
-    @PostMapping("/diary/update")
+    @PutMapping("/diary/update")
     public Map<String,Object> updateDiary(BookDiary bookDiary){
         HashMap<String,Object> map=new HashMap<>();
         BookDiary changeBookDiary = bookDiaryService.updateDiary(bookDiary);
@@ -93,6 +93,7 @@ public class MyPageController {
 
     @PostMapping("/diary/list")
     public List<BookDiary> bookDiaryList(Long userId){
+
         return bookDiaryService.diaryList(userId);
     }
 
@@ -101,7 +102,7 @@ public class MyPageController {
         return bookDiaryService.diaryDetail(id);
     }
 
-    @GetMapping("/diary/delete")
+    @DeleteMapping("/diary/delete")
     public Map<String,Object> deleteBookDiary(Long id,@RequestParam Long userId){
         Map<String, Object> map = new HashMap<>();
         List<BookDiary> bookDiaries = bookDiaryService.deleteDiary(id, userId);

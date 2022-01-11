@@ -36,7 +36,7 @@ const UpdateUser = () => {
         formData.append("postcode", document.getElementById("postcode").value);
         const result = axios({
           url: 'http://localhost:8080/mypage/userUpdate',
-          method: 'post',
+          method: 'put',
           data: formData
         });
         result.then((res) => {
