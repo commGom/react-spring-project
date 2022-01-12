@@ -19,7 +19,7 @@ class OrdersRepositoryTest {
     @Test
     public void addOrders(){
         //엔티티 조회 (회원확인 후 회원엔티티, 책번호로 책엔티티 조회)
-        User findUser = userRepository.findByEmailAndPassword("vkdnjehdwls@naver.com", "1234");
+        User findUser = userRepository.findByEmailAndPassword("phyw1129@naver.com", "12345");
         Long num=30L;
         for (int i = 0; i < 10; i++) {
             num=num+1L;

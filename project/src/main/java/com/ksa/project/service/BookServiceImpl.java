@@ -25,4 +25,10 @@ public class BookServiceImpl implements BookService{
 
         return bookRepository.findByCategory(category);
     }
+
+    @Override
+    public Book bookDetail(Long id) {
+        return bookRepository.findById(id).get();
+    }
+
 }
