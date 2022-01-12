@@ -14,8 +14,7 @@ import java.util.Optional;
 @RequestMapping("/book")
 @CrossOrigin
 public class BookController {
-    @Autowired
-    BookRepository bookRepository;
+
     @Autowired
     private BookService bookService;
 

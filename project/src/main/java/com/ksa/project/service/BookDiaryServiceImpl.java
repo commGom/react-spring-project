@@ -26,14 +26,24 @@ public class BookDiaryServiceImpl implements BookDiaryService{
 
     //독서노트 작성하기
     @Override
-    public BookDiary writeDiary(Long user_id, Long book_id, BookDiary bookDiary) {
+    public HashMap<String,Object> writeDiary(Long user_id, Long book_id, BookDiary bookDiary) {
         User findUser = userRepository.findById(user_id).get();
         Book book = bookRepository.findById(book_id).get();
         bookDiary.setBook(book);
         bookDiary.setUser(findUser);
 
-        BookDiary saveDiary = bookDiaryRepository.save(bookDiary);
-        return saveDiary;
+        BookDiary saveBookDiary = bookDiaryRepository.save(bookDiary);
+
+        HashMap<String,Object> map=new HashMap<>();
+        if (saveBookDiary!=null){
+            map.put("code",200);
+            map.put("msg","작성 성공");
+            map.put("saveInfo",saveBookDiary);
+        }else{
+            map.put("code",400);
+            map.put("msg","작성 실패");
+        }
+        return map;
     }
 
     //독서 노트 리스트
@@ -54,23 +64,39 @@ public class BookDiaryServiceImpl implements BookDiaryService{
 
     //독서 노트 삭제
     @Override
-    public List<BookDiary> deleteDiary(Long id,Long userId) {
+    public Map<String, Object> deleteDiary(Long id,Long userId) {
         bookDiaryRepository.deleteById(id);
         //삭제 후 BookDiary의 리스트를 반환
         User findUser = userRepository.findById(userId).get();
-        return bookDiaryRepository.findByUser(findUser);
+
+        Map<String, Object> map = new HashMap<>();
+        List<BookDiary> bookDiaries = bookDiaryRepository.findByUser(findUser);
+        //삭제 후 BookDiary의 리스트를 반환
+        map.put("bookDiary",bookDiaries);
+        map.put("code",200);
+        map.put("msg",id+"번 글이 삭제되었습니다.");
+        return map;
 
     }
 
     //독서 노트 수정
     @Override
-    public BookDiary updateDiary(BookDiary bookDiary) {
+    public HashMap<String,Object> updateDiary(BookDiary bookDiary) {
         BookDiary findDiary = bookDiaryRepository.findById(bookDiary.getId()).get();
         findDiary.setContent(bookDiary.getContent());
         findDiary.setThought(bookDiary.getThought());
         findDiary.setTitle(bookDiary.getTitle());
-        BookDiary save = bookDiaryRepository.save(findDiary);
-        return save;
+        BookDiary changeBookDiary = bookDiaryRepository.save(findDiary);
+        HashMap<String,Object> map=new HashMap<>();
+        if (changeBookDiary!=null){
+            map.put("code",200);
+            map.put("msg","수정 성공");
+            map.put("saveInfo",changeBookDiary);
+        }else{
+            map.put("code",400);
+            map.put("msg","작성 실패");
+        }
+        return map;
     }
 
     @Override
