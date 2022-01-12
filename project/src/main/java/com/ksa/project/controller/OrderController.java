@@ -18,9 +18,7 @@ public class OrderController {
 
     @PostMapping("/book")
     public Map<String,Object> orderView(String userId, String userPassword, Long bookId, int count){
-        System.out.println(userId + userPassword);
-        Map<String,Object> map=orderService.order(userId, userPassword, bookId, count);
-        return map;
+        return orderService.order(userId, userPassword, bookId, count);
     }
 
 }
