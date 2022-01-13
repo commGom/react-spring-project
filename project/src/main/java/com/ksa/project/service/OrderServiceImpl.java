@@ -42,6 +42,7 @@ public class OrderServiceImpl implements OrderService{
             map.put("msg", "success");
             map.put("order",save);
         }
+        System.out.println(map.get("msg"));
         return map;
     }
 
