@@ -6,11 +6,11 @@
    
 ## 구현 페이지 화면
 ### 1. 메인페이지
-![HEROPY](https://heropy.blog/css/images/logo.png)
+![메인페이지](https://user-images.githubusercontent.com/81788884/155150284-86a6aac7-5be9-4b36-864c-340c2d17f27c.png)
 ### 2. 도서 상세페이지
-![HEROPY](https://heropy.blog/css/images/logo.png)
+<img width="674" alt="책상세페이지" src="https://user-images.githubusercontent.com/81788884/155150324-b9b80a52-b34c-4dc4-91d9-f1c710572fa7.png">
 ### 3. 도서 기록 노트 CRUD 페이지
-![HEROPY](https://heropy.blog/css/images/logo.png)
+![독서노트](https://user-images.githubusercontent.com/81788884/155150311-d741eff5-fd37-4d3f-a237-169c45d239a3.png)
 
 ## 소프트웨어 개발환경  
 운영체제 - Windows 10, mac  
