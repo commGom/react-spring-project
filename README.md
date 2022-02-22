@@ -10,6 +10,7 @@
 ### 2. 도서 상세페이지
 
 <img width="674" alt="책상세페이지" src="https://user-images.githubusercontent.com/81788884/155150324-b9b80a52-b34c-4dc4-91d9-f1c710572fa7.png">
+
 ### 3. 도서 기록 노트 CRUD 페이지
 
 ![독서노트](https://user-images.githubusercontent.com/81788884/155150311-d741eff5-fd37-4d3f-a237-169c45d239a3.png)
