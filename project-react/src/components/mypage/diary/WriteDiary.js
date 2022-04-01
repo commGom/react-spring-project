@@ -17,7 +17,7 @@ const WriteDiary = () => {
     formData.append("userId", email);
     formData.append("userPassword", password)
     const result = axios({
-      url: 'http://localhost:8080/mypage/orders/list',
+      url: 'http://3.138.243.7/mypage/orders/list',
       method: 'post',
       data: formData
     });

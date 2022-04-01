@@ -10,7 +10,7 @@ const UpdateDiary = () => {
   useEffect(() => {
 
     const result = axios({
-      url: `http://localhost:8080/mypage/diary/${id}`,
+      url: `http://3.138.243.7/mypage/diary/${id}`,
       method: 'get',
     });
     result.then((res) => {

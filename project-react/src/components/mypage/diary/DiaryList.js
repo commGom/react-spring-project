@@ -20,7 +20,7 @@ const DiaryList = () => {
     formData.append("page", currentPage);
     formData.append("pageSize", pageSize);
     const result = axios({
-      url: 'http://localhost:8080/mypage/diary/list/sort',
+      url: 'http://3.138.243.7:8080/mypage/diary/list/sort',
       method: 'post',
       data: formData
     });

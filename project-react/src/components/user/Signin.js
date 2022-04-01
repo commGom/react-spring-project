@@ -45,7 +45,7 @@ const Signin = () => {
                 formData.append("email", email);
                 formData.append("password", password);
                 const result = axios({
-                  url: 'http://localhost:8080/user/api/signin',
+                  url: 'http://3.138.243.7/user/api/signin',
                   method: 'post',
                   data: formData
                 });
@@ -77,7 +77,7 @@ const Signin = () => {
 
 
 
-    
+
   );
 };
 

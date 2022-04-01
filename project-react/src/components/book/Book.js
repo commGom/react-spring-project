@@ -11,7 +11,7 @@ const Book = () => {
   // const [type, setType] = useState(category);
   useEffect(() => {
     const result = axios({
-      url: `http://localhost:8080/book/category/${category}`,
+      url: `http://3.138.243.7:8080/book/category/${category}`,
       method: 'get'
     });
     result.then((res) => {

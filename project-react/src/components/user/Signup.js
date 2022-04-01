@@ -53,7 +53,7 @@ const Signup = () => {
   return (
 
 
-    <div class="container h-100"  id="nanum_font">
+    <div class="container h-100" id="nanum_font">
       <div class="row h-100">
         <div class="col-sm-10 col-md-8 col-lg-6 mx-auto d-table h-100">
           <div class="d-table-cell align-middle">
@@ -132,7 +132,7 @@ const Signup = () => {
                         formData.append('address1', document.querySelector('[name=address1]').value);
                         formData.append('address2', document.querySelector('[name=address2]').value);
                         axios({
-                          url: 'http://localhost:8080/user/signup',
+                          url: 'http://3.138.243.7/user/signup',
                           method: 'post',
                           data: formData
                         }).then((res) => {
@@ -141,13 +141,13 @@ const Signup = () => {
                           if (res.data.code != 200) {
                             alert('🤦‍♂️회원가입 승인불가🤦‍♂️');
                             document.querySelector('[name=email]').value = '';
-                            document.querySelector('[name=password]').value ='';
-                            document.querySelector('[name=birth]').value ='';
-                            document.querySelector('[name=name]').value ='';
-                            document.querySelector('[name=phone]').value ='';
-                            document.querySelector('[name=postcode]').value ='';
-                            document.querySelector('[name=address1]').value ='';
-                            document.querySelector('[name=address2]').value ='';
+                            document.querySelector('[name=password]').value = '';
+                            document.querySelector('[name=birth]').value = '';
+                            document.querySelector('[name=name]').value = '';
+                            document.querySelector('[name=phone]').value = '';
+                            document.querySelector('[name=postcode]').value = '';
+                            document.querySelector('[name=address1]').value = '';
+                            document.querySelector('[name=address2]').value = '';
                           } else {
                             alert('👊회원가입 완료👊');
                             navigate("/user/signin");

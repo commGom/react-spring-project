@@ -14,7 +14,7 @@ const DiaryListPaging = () => {
     const formData = new FormData();
     formData.append("userId", id);
     const result = axios({
-      url: 'http://localhost:8080/mypage/diary/list',
+      url: 'http://3.138.243.7:8080/mypage/diary/list',
       method: 'post',
       data: formData
     });
